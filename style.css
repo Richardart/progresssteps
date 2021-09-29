@@ -1,0 +1,70 @@
+:root{
+    --nonactive-color:#e0e0e0;
+    --activecolor:#05a7f7;
+}
+
+*{
+    box-sizing: border-box;
+}
+
+body{
+    font-family: "Arial";
+    height: 100vh;
+    background-color: #747d79;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    margin: 0;
+    overflow: hidden;
+}
+
+.container{
+    text-align: center;
+}
+
+.progress-container{
+    width: 350px;
+
+    display: flex;
+    justify-content: space-between;
+
+    margin-bottom: 30px;
+
+    position: relative;
+}
+
+.progress-container::before{
+    content: '';
+    width: 350px;
+    height: 4px;
+
+    background-color: var(--nonactive-color);
+
+    position: absolute;
+    top: 50%;
+    left: 0;
+
+    transform: translateY(-50%);
+
+    z-index: -1;
+}
+
+.progress{
+    width: 50%;
+    height: 4px;
+    background-color: var(--activecolor);
+
+    position: absolute;
+    top: 50%;
+    left: 0;
+
+    transform: translateY(-50%);
+
+    z-index: -1
+}
+
+
+
+/*29PS*/
